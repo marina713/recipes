@@ -46,6 +46,7 @@ const SearchAdvancedList = () => {
       .map((item) => `&${item.label}=${encodeURIComponent(item.ddElement)}`)
       .join("");
     dispatch(updateAdvancedSearch(advancedSearchQuery));
+    setKeyDd(keyDd + 1);
   };
 
   const resetFilters = () => {

@@ -24,9 +24,12 @@
   background-color: #17d9c3;
   color: #007ea8;
   border-radius: 10px;
-  width: 7em;
-  max-height: 6em;
+  width: 6.5em;
+  max-height: 7em;
   overflow: scroll;
+  z-index: 3000;
+  position: absolute;
+  margin: 0 3px;
 }
 
 .filter-selected {

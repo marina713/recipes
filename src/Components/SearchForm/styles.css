@@ -73,5 +73,11 @@
 
 .search > div > input:focus,
 .search > div > input:not(:placeholder-shown) {
-  width: 250px;
+  width: 220px;
+}
+
+@media only screen and (min-width: 730px) {
+  .search {
+    width: max-content;
+  }
 }
