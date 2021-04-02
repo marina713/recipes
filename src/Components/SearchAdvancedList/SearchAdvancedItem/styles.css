@@ -1,0 +1,37 @@
+.dd-wrapper {
+  margin: 2px 2px;
+}
+.dd-header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.dd-button {
+  width: 8em;
+  border: 0;
+  background: #17d9c3;
+  cursor: pointer;
+}
+.dd-button:hover,
+.dd-list-item:hover {
+  background: #17d9c3;
+  filter: brightness(110%);
+}
+
+.dd-list {
+  display: flex;
+  flex-direction: column;
+  background-color: #17d9c3;
+  color: #007ea8;
+  border-radius: 10px;
+  width: 7em;
+  max-height: 6em;
+  overflow: scroll;
+}
+
+.filter-selected {
+  color: #e207b9;
+  background-color: #ff63ed;
+  width: 100%;
+  border-radius: 5px;
+}

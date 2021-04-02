@@ -1,0 +1,56 @@
+@media (prefers-reduced-motion: no-preference) {
+  .spin {
+    animation: App-logo-spin infinite 5000ms linear;
+  }
+  .spin:hover {
+    animation: none;
+    height: 50vmin;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .spin-inverse {
+    animation: App-logo-spin-inverse infinite 5000ms linear;
+  }
+  .spin-inverse:hover {
+    animation: none;
+    height: 50vmin;
+  }
+}
+
+.App-header {
+  min-height: 30vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 3vmin);
+  font-weight: 500;
+  color: #007ea8;
+  padding: 10px 50px;
+}
+.App-header h1 {
+  margin: 0 20px;
+}
+
+.App-logo {
+  max-height: 5em;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes App-logo-spin-inverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}

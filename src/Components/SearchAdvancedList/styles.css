@@ -1,0 +1,40 @@
+.searchadvanced-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.searchadvanced-filters {
+  animation-name: transitionBox;
+}
+@keyframes transitionBox {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.more-filters-container {
+  justify-content: center;
+  display: flex;
+}
+
+.advance-search-button {
+  color: #e207b9;
+  background-color: #ff63ed;
+  border: 3px solid #e207b9;
+  border-radius: 10px;
+  min-height: 33px;
+  margin: 2px;
+  max-width: 300px;
+  align-self: center;
+}
+.advance-search-button:hover {
+  filter: brightness(125%);
+}
+
+.unique-button-search {
+  height: 50px;
+  width: 120px;
+}
