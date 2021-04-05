@@ -2,16 +2,17 @@
   text-align: center;
   background-color: #ffd600;
   font-family: "Lexend", sans-serif;
+  padding-bottom: 20px;
 }
 
 .App-link {
   color: #17d9c3;
 }
 /* Color Palette
-#ffd600
+#ffd600 yellow
 #f95116
 #ff9900 light orange
-#ff63ed
+#ff63ed rosa fluix
 #e207b9
 #007ea8
 #17d9c3  light blue

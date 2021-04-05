@@ -21,11 +21,11 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 3vmin);
+  justify-content: space-around;
+  font-size: 15px;
   font-weight: 500;
   color: #007ea8;
-  padding: 10px 50px;
+  padding: 10px 30px;
 }
 .App-header h1 {
   margin: 0 7px;
@@ -41,7 +41,12 @@
     font-size: 3em;
   }
   .App-logo {
-    max-width: 5em;
+    max-width: 25%;
+  }
+}
+@media only screen and (min-width: 700px) {
+  .App-logo {
+    max-width: 20vh;
   }
 }
 

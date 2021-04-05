@@ -11,7 +11,11 @@
   text-align: left;
   background-color: #007ea8;
   margin: 10px 0 30px;
-  padding: 0 5%;
+  padding: 0 4%;
+}
+
+.search-form {
+  min-width: 40%;
 }
 
 .search {
@@ -64,6 +68,7 @@
 }
 
 .search-box:hover {
+  transform: scale(1.2);
   filter: brightness(1.2);
 }
 
@@ -73,7 +78,7 @@
 
 .search > div > input:focus,
 .search > div > input:not(:placeholder-shown) {
-  width: 250px;
+  width: 235px;
 }
 
 @media only screen and (min-width: 730px) {

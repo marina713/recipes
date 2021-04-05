@@ -17,3 +17,9 @@ export const updateAdvancedSearch = (value) => {
     payload: { value },
   };
 };
+
+export const updateShowMoreSearchesCounter = () => {
+  return {
+    type: "SHOW_MORE_SEARCHES_CLICKED",
+  };
+};

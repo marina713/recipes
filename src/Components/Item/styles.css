@@ -2,7 +2,7 @@
   background-color: rgb(255 214 0);
   border-radius: 25px;
   padding: 10px;
-  margin-bottom: 8px;
+  margin-bottom: 18px;
   width: 18em;
   display: flex;
   flex-direction: column;
@@ -23,7 +23,7 @@
   color: orangered;
   padding-bottom: 10px;
   font-size: 1.3em;
-  height: 55px;
+  height: 62px;
   overflow: scroll;
   display: flex;
   justify-content: center;
