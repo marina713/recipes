@@ -1,0 +1,10 @@
+.ingredient {
+  background-color: #ff9900c2;
+  border-radius: 15px;
+  line-height: 1.3em;
+  font-size: 12;
+  margin-top: 3px;
+}
+.ingredient:hover {
+  filter: brightness(120%);
+}

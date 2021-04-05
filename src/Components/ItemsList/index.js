@@ -16,6 +16,7 @@ const ItemsList = (props) => {
         url={item.url}
         image={item.image}
         healthLabels={item.healthLabels}
+        ingredientsList={item.ingredientLines}
       />
     ));
   }

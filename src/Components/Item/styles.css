@@ -1,9 +1,9 @@
 .item-wrap {
   background-color: rgb(255 214 0);
-  border-radius: 8%;
+  border-radius: 25px;
   padding: 10px;
   margin-bottom: 8px;
-  width: 17em;
+  width: 18em;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -15,14 +15,19 @@
 .item-img {
   border-radius: 8%;
   width: 90%;
-  max-height: 60%;
-  margin-bottom: 10px;
+  height: auto;
+  margin-bottom: 5px;
 }
 .caption {
   font-weight: 800;
   color: orangered;
   padding-bottom: 10px;
   font-size: 1.3em;
+  height: 55px;
+  overflow: scroll;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .item-button {
@@ -37,4 +42,5 @@
   border: none;
   cursor: pointer;
   align-items: center;
+  margin: 5px;
 }

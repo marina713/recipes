@@ -40,7 +40,7 @@
   width: 4px;
   height: 20px;
   position: absolute;
-  top: 20px;
+  top: 27px;
   transform: rotate(135deg);
 }
 
@@ -48,8 +48,8 @@
   color: #e207b9;
   font-size: 16px;
   background: transparent;
-  width: 25px;
-  height: 25px;
+  width: 35px;
+  height: 35px;
   padding: 10px;
   border: solid 3px #e207b9;
   outline: none;
@@ -73,7 +73,7 @@
 
 .search > div > input:focus,
 .search > div > input:not(:placeholder-shown) {
-  width: 220px;
+  width: 250px;
 }
 
 @media only screen and (min-width: 730px) {
