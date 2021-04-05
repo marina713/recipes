@@ -4,7 +4,6 @@
   }
   .spin:hover {
     animation: none;
-    height: 50vmin;
   }
 }
 
@@ -14,7 +13,6 @@
   }
   .spin-inverse:hover {
     animation: none;
-    height: 50vmin;
   }
 }
 
@@ -30,11 +28,21 @@
   padding: 10px 50px;
 }
 .App-header h1 {
-  margin: 0 20px;
+  margin: 0 7px;
+  font-size: 1.6em;
+}
+.App-logo {
+  max-width: 25%;
 }
 
-.App-logo {
-  max-height: 5em;
+@media only screen and (min-width: 500px) {
+  .App-header h1 {
+    margin: 0 15px;
+    font-size: 2em;
+  }
+  .App-logo {
+    max-width: 4.5em;
+  }
 }
 
 @keyframes App-logo-spin {
