@@ -9,17 +9,19 @@ const Item = ({ label, image, healthLabels, ingredientsList, url }) => {
 
   return (
     <div className="item-wrap">
-      <div>
-        <div className="caption">{label}</div>
-        <a href={url}>
-          <img className="item-img" src={image} alt="" />
-        </a>
-        <HealthCategory data={healthLabels} />
-        <IngredientsList ingredientsList={ingredientsList} />
-      </div>
-      <a href={url} className="item-button" target="_blank" rel="noreferrer">
-        {t("SeeRecipe")}
+      <div className="caption">{label}</div>
+      <a href={url} className="a-img">
+        <img className="item-img" src={image} alt="" />
       </a>
+      <div className="recipe-content">
+        <div>
+          <HealthCategory data={healthLabels} />
+          <IngredientsList ingredientsList={ingredientsList} />
+        </div>
+        <a href={url} className="item-button" target="_blank" rel="noreferrer">
+          {t("SeeRecipe")}
+        </a>
+      </div>
     </div>
   );
 };

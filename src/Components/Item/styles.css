@@ -12,6 +12,10 @@
   /* rgb(253 244 211 / 28%); */
 }
 
+.a-img {
+  width: inherit;
+}
+
 .item-img {
   border-radius: 8%;
   width: 90%;
@@ -43,4 +47,12 @@
   cursor: pointer;
   align-items: center;
   margin: 5px;
+  width: fit-content;
+  align-self: center;
+}
+
+.recipe-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }

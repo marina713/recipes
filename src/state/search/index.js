@@ -2,6 +2,7 @@ const initialState = {
   searchText: "",
   query: "artichoke",
   advancedSearchQuery: "",
+  latestSearches: [],
   showMoreSearchesClickCounter: 0,
   language: "en",
 };
@@ -14,8 +15,12 @@ const searchReducer = (state = initialState, action) => {
     case "SUBMIT_SEARCH": {
       return {
         ...state,
-        query: state.searchText,
+        query: action.payload.value,
         searchText: "",
+        latestSearches:
+          state.searchText.length > 0
+            ? [state.searchText].concat(state.latestSearches)
+            : state.latestSearches,
         showMoreSearchesClickCounter: 0,
       };
     }
@@ -41,6 +46,7 @@ const searchReducer = (state = initialState, action) => {
         advancedSearchQuery: "",
         showMoreSearchesClickCounter: 0,
         language: action.payload.value,
+        latestSearches: [],
       };
     }
 

@@ -19,6 +19,7 @@ export const initialiseTranslation = () => {
             Ingredients: "Ingredients",
             SeeRecipe: "See recipe",
             MoreRecipes: "MOOORE YUMMY RECIPES",
+            LatestSearches: "Recently searched",
           },
         },
         es: {
@@ -34,6 +35,7 @@ export const initialiseTranslation = () => {
             Ingredients: "Ingredientes",
             SeeRecipe: "Ver receta",
             MoreRecipes: "MAS RECETAS DELICIOOOSAS",
+            LatestSearches: "Busquedas recientes",
           },
         },
       },

@@ -1,0 +1,25 @@
+.latestsearches-box {
+  align-self: center;
+  display: flex;
+}
+
+.latestsearches-title {
+  color: #17d9c3;
+  font-size: small;
+  align-self: center;
+  margin-right: 5px;
+  width: min-content;
+}
+
+.latest-searches {
+  background-color: #17d9c3;
+  color: #007ea8;
+  margin-left: 3px;
+  border-radius: 7px;
+  font-size: small;
+}
+
+.latest-searches:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}

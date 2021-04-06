@@ -5,9 +5,10 @@ export const onSearchChange = (value) => {
   };
 };
 
-export const submitSearch = () => {
+export const submitSearch = (value) => {
   return {
     type: "SUBMIT_SEARCH",
+    payload: { value },
   };
 };
 

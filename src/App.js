@@ -30,7 +30,9 @@ function App() {
     const url_prefix = language === "en" ? "api" : "test-es";
     let from = num_recipes * showMoreSearchesClickCounter;
     let to = num_recipes * (showMoreSearchesClickCounter + 1);
-    let url = `https://${url_prefix}.edamam.com/search?q=${query}&app_id=${app_id}&app_key=${app_key}&from=${from}&to=${to}${advancedSearchQuery}`;
+    const CORSByPass =
+      language === "es" ? "https://cors-anywhere.herokuapp.com/" : "";
+    let url = `${CORSByPass}https://${url_prefix}.edamam.com/search?q=${query}&app_id=${app_id}&app_key=${app_key}&from=${from}&to=${to}${advancedSearchQuery}`;
 
     console.log(url);
 
