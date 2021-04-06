@@ -6,12 +6,16 @@ import Header from "./Components/Header/";
 import RecipesList from "./Components/ItemsList";
 import SearchBar from "./Components/SearchBar";
 import MoreSearches from "./Components/MoreSearches/";
+import { initialiseTranslation } from "./translation/";
+
+initialiseTranslation();
 
 function App() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
 
   const query = useSelector((state) => state.search.query);
+  const language = useSelector((state) => state.search.language);
   const advancedSearchQuery = useSelector(
     (state) => state.search.advancedSearchQuery
   );
@@ -22,10 +26,11 @@ function App() {
   useEffect(() => {
     const app_key = "a3a8ac2f511a16ace35fd717243e04c1";
     const app_id = "ccddccff";
-    const num_recipes = 13;
-    let from = num_recipes * showMoreSearchesClickCounter + 1;
+    const num_recipes = 12;
+    const url_prefix = language === "en" ? "api" : "test-es";
+    let from = num_recipes * showMoreSearchesClickCounter;
     let to = num_recipes * (showMoreSearchesClickCounter + 1);
-    let url = `https://api.edamam.com/search?q=${query}&app_id=${app_id}&app_key=${app_key}&from=${from}&to=${to}${advancedSearchQuery}`;
+    let url = `https://${url_prefix}.edamam.com/search?q=${query}&app_id=${app_id}&app_key=${app_key}&from=${from}&to=${to}${advancedSearchQuery}`;
 
     console.log(url);
 
@@ -36,7 +41,7 @@ function App() {
       }
     };
 
-    axios(url)
+    axios(url, { crossdomain: true })
       .then((response) =>
         updateData(response.data.hits.map((data) => data.recipe))
       )

@@ -23,3 +23,10 @@ export const updateShowMoreSearchesCounter = () => {
     type: "SHOW_MORE_SEARCHES_CLICKED",
   };
 };
+
+export const changeLanguage = (value) => {
+  return {
+    type: "CHANGE_LANGUAGE",
+    payload: { value },
+  };
+};

@@ -3,10 +3,12 @@ import "./styles.css";
 import SearchAdvancedItem from "./SearchAdvancedItem";
 import { updateAdvancedSearch } from "../../state/search/actions";
 import { useDispatch } from "react-redux";
+import { useTranslation } from "react-i18next";
 
 import initialValues from "./variables";
 
 const SearchAdvancedList = () => {
+  const { t } = useTranslation();
   const dispatch = useDispatch();
   const [showMoreFilters, setShowMoreFilters] = useState(false);
   const [keyDd, setKeyDd] = useState(0);
@@ -79,17 +81,17 @@ const SearchAdvancedList = () => {
         }
         onClick={toggleShowMoreFilters}
       >
-        + FILTERS
+        {t("MoreFilters")}
       </button>
       {showMoreFilters ? (
         <div className="searchadvanced-filters">
           <ul className="items-container"> {items} </ul>
           <div className="more-filters-container">
             <button className="advance-search-button" onClick={applyFilters}>
-              Apply Filters
+              {t("ApplyFilters")}
             </button>
             <button className="advance-search-button" onClick={resetFilters}>
-              Reset Filters
+              {t("ResetFilters")}
             </button>
           </div>
         </div>

@@ -3,6 +3,7 @@ const initialState = {
   query: "artichoke",
   advancedSearchQuery: "",
   showMoreSearchesClickCounter: 0,
+  language: "en",
 };
 
 const searchReducer = (state = initialState, action) => {
@@ -31,6 +32,18 @@ const searchReducer = (state = initialState, action) => {
         showMoreSearchesClickCounter: state.showMoreSearchesClickCounter + 1,
       };
     }
+
+    case "CHANGE_LANGUAGE": {
+      return {
+        ...state,
+        searchText: "",
+        query: action.payload.value === "en" ? "artichoke" : "alcachofa",
+        advancedSearchQuery: "",
+        showMoreSearchesClickCounter: 0,
+        language: action.payload.value,
+      };
+    }
+
     default:
       return state;
   }

@@ -2,8 +2,10 @@ import React from "react";
 import "./styles.css";
 import { submitSearch, onSearchChange } from "../../state/search/actions";
 import { useDispatch } from "react-redux";
+import { useTranslation } from "react-i18next";
 
 function SearchForm() {
+  const { t } = useTranslation();
   const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
@@ -17,14 +19,14 @@ function SearchForm() {
     <form className="search-form" onSubmit={handleSubmit}>
       <div className="search-flexbox">
         <div className="search">
-          <h1>Search a recipe</h1>
-          <h4>Click on search icon, then type your keyword.</h4>
+          <h1> {t("SearchTitle")} </h1>
+          <h4> {t("SearchSubtitle")} </h4>
           <div className="search-box">
             <input
               type="search"
               onChange={(e) => dispatch(onSearchChange(e.target.value))}
               name="search"
-              placeholder="Search..."
+              placeholder={t("SearchPlaceholder")}
             />
           </div>
         </div>
