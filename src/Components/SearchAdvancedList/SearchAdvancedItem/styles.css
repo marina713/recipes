@@ -38,3 +38,18 @@
   width: 100%;
   border-radius: 5px;
 }
+.item-button {
+  background: #17d9c3;
+  box-shadow: 0 0 1px 0 rgb(8 11 14 / 6%), 0 6px 6px -1px rgb(8 11 14 / 10%);
+  border-radius: 1000rem;
+  padding: 5px 10px;
+  line-height: 24px;
+  font-size: 14px;
+  font-weight: 800;
+  color: #007ea8;
+  border: none;
+  cursor: pointer;
+  align-items: center;
+  margin: 5px;
+  align-self: center;
+}
