@@ -1,27 +1,26 @@
 import React from "react";
 import Ingredient from "../Ingredient";
-import "./styles.css";
-import "../Item/styles.css";
 import { useTranslation } from "react-i18next";
+import { Title, Container } from "./styles";
 
 const IngredientsList = ({ ingredientsList }) => {
   const { t } = useTranslation();
-
-  let ingredients;
   const numIngredients = ingredientsList.length;
-  if (numIngredients > 0) {
-    ingredients = ingredientsList.map((ingredient, index) => (
-      <Ingredient key={index} id={index} ingredient={ingredient} />
-    ));
-  }
+
+  const ingredients =
+    numIngredients > 0
+      ? ingredientsList.map((ingredient, index) => (
+          <Ingredient key={index} id={index} ingredient={ingredient} />
+        ))
+      : null;
 
   return (
-    <div>
-      <span className="ingredients-title">
+    <>
+      <Title>
         {t("Ingredients")}: {numIngredients}
-      </span>
-      <ul className="ingredients-container"> {ingredients} </ul>
-    </div>
+      </Title>
+      <Container>{ingredients}</Container>
+    </>
   );
 };
 

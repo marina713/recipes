@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import "./styles.css";
-import SearchAdvancedItem from "./SearchAdvancedItem";
-import { updateAdvancedSearch } from "../../state/search/actions";
 import { useDispatch } from "react-redux";
 import { useTranslation } from "react-i18next";
-
+import { updateAdvancedSearch } from "../../state/search/actions";
+import { MoreFiltersDivCol, ShowMoreButton, MoreFiltersDiv } from "./styles";
+import SearchAdvancedItem from "./SearchAdvancedItem";
 import initialValues from "./variables";
 
 const SearchAdvancedList = () => {
@@ -73,30 +72,27 @@ const SearchAdvancedList = () => {
   }
 
   return (
-    <div className="searchadvanced-box">
-      <button
-        className={
-          "advance-search-button " +
-          (showMoreFilters ? null : " unique-button-search")
-        }
+    <MoreFiltersDivCol>
+      <ShowMoreButton
+        className={showMoreFilters ? null : "unique-button-search"}
         onClick={toggleShowMoreFilters}
       >
         {t("MoreFilters")}
-      </button>
+      </ShowMoreButton>
       {showMoreFilters ? (
-        <div className="searchadvanced-filters">
+        <MoreFiltersDivCol className="translate">
           <ul className="items-container"> {items} </ul>
-          <div className="more-filters-container">
-            <button className="advance-search-button" onClick={applyFilters}>
+          <MoreFiltersDiv>
+            <ShowMoreButton onClick={applyFilters}>
               {t("ApplyFilters")}
-            </button>
-            <button className="advance-search-button" onClick={resetFilters}>
+            </ShowMoreButton>
+            <ShowMoreButton onClick={resetFilters}>
               {t("ResetFilters")}
-            </button>
-          </div>
-        </div>
+            </ShowMoreButton>
+          </MoreFiltersDiv>
+        </MoreFiltersDivCol>
       ) : null}
-    </div>
+    </MoreFiltersDivCol>
   );
 };
 

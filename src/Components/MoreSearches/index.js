@@ -1,6 +1,6 @@
 import React from "react";
-import "../SearchAdvancedList/styles.css";
 import { updateShowMoreSearchesCounter } from "../../state/search/actions";
+import { ShowMoreButton } from "../SearchAdvancedList/styles.js";
 import { useDispatch } from "react-redux";
 import { useTranslation } from "react-i18next";
 
@@ -14,9 +14,9 @@ const MoreSearches = () => {
 
   return (
     <div className="more-searches-box">
-      <button className={"advance-search-button "} onClick={showMoreResults}>
+      <ShowMoreButton onClick={showMoreResults}>
         {t("MoreRecipes")}
-      </button>
+      </ShowMoreButton>
     </div>
   );
 };

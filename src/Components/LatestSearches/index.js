@@ -1,8 +1,12 @@
 import React from "react";
-import "./styles.css";
 import { useTranslation } from "react-i18next";
 import { useSelector, useDispatch } from "react-redux";
 import { submitSearch } from "../../state/search/actions";
+import {
+  LatestSearchesButton,
+  LatestSearchesTitle,
+  LatestSearchesDiv,
+} from "./styles";
 
 const LatestSearches = () => {
   const { t } = useTranslation();
@@ -14,23 +18,22 @@ const LatestSearches = () => {
 
   if (num_latestSearches > 0) {
     searches = latestSearches.map((s, index) => (
-      <button
+      <LatestSearchesButton
         key={index}
         onClick={() => dispatch(submitSearch(s))}
-        className="latest-searches"
       >
         {s}
-      </button>
+      </LatestSearchesButton>
     ));
   }
 
   return (
-    <div className="latestsearches-box">
-      <span className="latestsearches-title">
+    <LatestSearchesDiv>
+      <LatestSearchesTitle>
         {num_latestSearches > 0 ? t("LatestSearches") : null}
-      </span>
-      <ul className="latest-searches-container"> {searches} </ul>
-    </div>
+      </LatestSearchesTitle>
+      <ul> {searches} </ul>
+    </LatestSearchesDiv>
   );
 };
 
