@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/recipes/static/css/main.98164d34.chunk.css",
-    "main.js": "/recipes/static/js/main.06bc4cbb.chunk.js",
-    "main.js.map": "/recipes/static/js/main.06bc4cbb.chunk.js.map",
-    "runtime-main.js": "/recipes/static/js/runtime-main.8d87e01b.js",
-    "runtime-main.js.map": "/recipes/static/js/runtime-main.8d87e01b.js.map",
-    "static/js/2.443c2b75.chunk.js": "/recipes/static/js/2.443c2b75.chunk.js",
-    "static/js/2.443c2b75.chunk.js.map": "/recipes/static/js/2.443c2b75.chunk.js.map",
-    "static/js/3.75428f3b.chunk.js": "/recipes/static/js/3.75428f3b.chunk.js",
-    "static/js/3.75428f3b.chunk.js.map": "/recipes/static/js/3.75428f3b.chunk.js.map",
+    "main.css": "/recipes/static/css/main.8413c526.chunk.css",
+    "main.js": "/recipes/static/js/main.8a34b430.chunk.js",
+    "main.js.map": "/recipes/static/js/main.8a34b430.chunk.js.map",
+    "runtime-main.js": "/recipes/static/js/runtime-main.350f5753.js",
+    "runtime-main.js.map": "/recipes/static/js/runtime-main.350f5753.js.map",
+    "static/js/2.5de3a42e.chunk.js": "/recipes/static/js/2.5de3a42e.chunk.js",
+    "static/js/2.5de3a42e.chunk.js.map": "/recipes/static/js/2.5de3a42e.chunk.js.map",
+    "static/js/3.a5b37a6a.chunk.js": "/recipes/static/js/3.a5b37a6a.chunk.js",
+    "static/js/3.a5b37a6a.chunk.js.map": "/recipes/static/js/3.a5b37a6a.chunk.js.map",
     "index.html": "/recipes/index.html",
-    "static/css/main.98164d34.chunk.css.map": "/recipes/static/css/main.98164d34.chunk.css.map",
-    "static/js/2.443c2b75.chunk.js.LICENSE.txt": "/recipes/static/js/2.443c2b75.chunk.js.LICENSE.txt",
+    "static/css/main.8413c526.chunk.css.map": "/recipes/static/css/main.8413c526.chunk.css.map",
+    "static/js/2.5de3a42e.chunk.js.LICENSE.txt": "/recipes/static/js/2.5de3a42e.chunk.js.LICENSE.txt",
     "static/media/dairy-free.c470f358.png": "/recipes/static/media/dairy-free.c470f358.png",
     "static/media/egg-free.4f824bec.png": "/recipes/static/media/egg-free.4f824bec.png",
     "static/media/en-lang.7d3f62a1.png": "/recipes/static/media/en-lang.7d3f62a1.png",
@@ -20,9 +20,9 @@
     "static/media/vegetarian.3883f7cc.png": "/recipes/static/media/vegetarian.3883f7cc.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.8d87e01b.js",
-    "static/js/2.443c2b75.chunk.js",
-    "static/css/main.98164d34.chunk.css",
-    "static/js/main.06bc4cbb.chunk.js"
+    "static/js/runtime-main.350f5753.js",
+    "static/js/2.5de3a42e.chunk.js",
+    "static/css/main.8413c526.chunk.css",
+    "static/js/main.8a34b430.chunk.js"
   ]
 }
