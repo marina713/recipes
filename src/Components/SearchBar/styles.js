@@ -1,4 +1,6 @@
-.search-flexbox {
+import styled from "styled-components";
+
+export const Container = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
@@ -8,8 +10,10 @@
   background-color: #007ea8;
   margin: 10px 0 30px;
   padding: 0 4%;
-}
 
-.column {
-  flex-direction: column;
-}
+  &.column {
+    flex-direction: column;
+    width: fit-content;
+    margin: 10px 15px 20px;
+  }
+`;

@@ -1,5 +1,5 @@
 import React from "react";
-import "./styles.css";
+import { Container, Image } from "./styles";
 import enlang from "./en-lang.png";
 import eslang from "./es-lang.png";
 import { useDispatch } from "react-redux";
@@ -18,15 +18,11 @@ const LanguagesList = () => {
 
   const language = languages.map((lang, index) => (
     <button key={index} onClick={() => handleChangeLanguage(lang)}>
-      <img
-        src={lang === "en" ? enlang : eslang}
-        alt={`${lang} language`}
-        className="lang-img"
-      />
+      <Image src={lang === "en" ? enlang : eslang} alt={`${lang} language`} />
     </button>
   ));
 
-  return <ul className="languages-container"> {language} </ul>;
+  return <Container> {language} </Container>;
 };
 
 export default LanguagesList;

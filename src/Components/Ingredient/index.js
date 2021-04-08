@@ -1,8 +1,8 @@
 import React from "react";
-import "./styles.css";
+import { ListItem } from "./styles";
 
 const Ingredient = ({ ingredient }) => {
-  return <li className="ingredient"> {ingredient} </li>;
+  return <ListItem> {ingredient} </ListItem>;
 };
 
 export default Ingredient;

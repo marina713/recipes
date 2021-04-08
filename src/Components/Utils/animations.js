@@ -11,8 +11,8 @@ export const translate = keyframes`
 `;
 
 export const onHoverHighlight = css`
-  filter: brightness(125%);
-  transform: scale(1.3);
+  filter: brightness(120%);
+  transform: scale(1.2);
   transition: ease-in 0.2s;
 `;
 

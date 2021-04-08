@@ -20,6 +20,8 @@ export const initialiseTranslation = () => {
             SeeRecipe: "See recipe",
             MoreRecipes: "MOOORE YUMMY RECIPES",
             LatestSearches: "Recently searched",
+            NoRecipes: "No Recipes found :(",
+            NoRecipesSubtitle: "Try another search!",
           },
         },
         es: {
@@ -36,6 +38,8 @@ export const initialiseTranslation = () => {
             SeeRecipe: "Ver receta",
             MoreRecipes: "MAS RECETAS DELICIOOOSAS",
             LatestSearches: "Busquedas recientes",
+            NoRecipes: "No se han encontrado recetas :(",
+            NoRecipesSubtitle: "Intenta otra busqueda!",
           },
         },
       },

@@ -2,7 +2,12 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useTranslation } from "react-i18next";
 import { updateAdvancedSearch } from "../../state/search/actions";
-import { MoreFiltersDivCol, ShowMoreButton, MoreFiltersDiv } from "./styles";
+import {
+  MoreFiltersDivCol,
+  ShowMoreButton,
+  MoreFiltersDiv,
+  UList,
+} from "./styles";
 import SearchAdvancedItem from "./SearchAdvancedItem";
 import initialValues from "./variables";
 
@@ -81,7 +86,7 @@ const SearchAdvancedList = () => {
       </ShowMoreButton>
       {showMoreFilters ? (
         <MoreFiltersDivCol className="translate">
-          <ul className="items-container"> {items} </ul>
+          <UList> {items} </UList>
           <MoreFiltersDiv>
             <ShowMoreButton onClick={applyFilters}>
               {t("ApplyFilters")}

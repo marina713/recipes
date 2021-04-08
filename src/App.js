@@ -1,4 +1,3 @@
-import "./App.css";
 import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import axios from "axios";
@@ -7,6 +6,7 @@ import RecipesList from "./Components/ItemsList";
 import SearchBar from "./Components/SearchBar";
 import MoreSearches from "./Components/MoreSearches/";
 import { initialiseTranslation } from "./translation/";
+import { Container } from "./styles";
 
 initialiseTranslation();
 
@@ -53,14 +53,12 @@ function App() {
   }, [advancedSearchQuery, query, showMoreSearchesClickCounter]);
 
   return (
-    <div className="App">
+    <Container>
       <Header />
       <SearchBar />
-      <div className="main-content">
-        {loading ? <p>Loading...</p> : <RecipesList data={data} />}
-      </div>
+      <div> {loading ? <p>Loading...</p> : <RecipesList data={data} />} </div>
       <MoreSearches />
-    </div>
+    </Container>
   );
 }
 

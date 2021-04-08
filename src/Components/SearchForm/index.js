@@ -1,5 +1,12 @@
 import React from "react";
-import "./styles.css";
+import {
+  Form,
+  Container,
+  Title,
+  SubTitle,
+  Input,
+  SearchContainer,
+} from "./styles";
 import { submitSearch, onSearchChange } from "../../state/search/actions";
 import { useDispatch, useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
@@ -17,20 +24,20 @@ function SearchForm() {
   };
 
   return (
-    <form className="search-form" onSubmit={handleSubmit}>
-      <div className="search">
-        <h1> {t("SearchTitle")} </h1>
-        <h4> {t("SearchSubtitle")} </h4>
-        <div className="search-box">
-          <input
+    <Form onSubmit={handleSubmit}>
+      <Container>
+        <Title> {t("SearchTitle")} </Title>
+        <SubTitle> {t("SearchSubtitle")} </SubTitle>
+        <SearchContainer>
+          <Input
             type="search"
             onChange={(e) => dispatch(onSearchChange(e.target.value))}
             name="search"
             placeholder={t("SearchPlaceholder")}
           />
-        </div>
-      </div>
-    </form>
+        </SearchContainer>
+      </Container>
+    </Form>
   );
 }
 

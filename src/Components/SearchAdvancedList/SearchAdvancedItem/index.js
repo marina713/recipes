@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./styles.css";
+import { Container, Title, List, Item } from "./styles";
 
 const SearchAdvancedItem = ({
   title,
@@ -13,32 +13,28 @@ const SearchAdvancedItem = ({
   const openDropdown = () => setListOpen(!isListOpen);
 
   return (
-    <div className="dd-wrapper">
-      <button className="item-button dd-button" onClick={openDropdown}>
-        <div className="dd-header">
-          <div className="dd-header-title">{headerTitle}</div>
-          {isListOpen ? "/\\" : "\\/"}
-        </div>
-      </button>
-      <div className="dd-list">
+    <Container>
+      <Title onClick={openDropdown}>
+        <span>{headerTitle}</span>
+        <span>{isListOpen ? "/\\" : "\\/"}</span>
+      </Title>
+      <List>
         {isListOpen
           ? dropdownList
               .sort((a, b) => a.id - b.id)
               .map((item) => (
-                <button
+                <Item
                   type="button"
-                  className={
-                    "dd-list-item" + (item.isSelected ? " filter-selected" : "")
-                  }
+                  isSelected={item.isSelected}
                   key={item.id}
                   onClick={() => handleSelectItem(item)}
                 >
                   {item.ddElement}
-                </button>
+                </Item>
               ))
           : null}
-      </div>
-    </div>
+      </List>
+    </Container>
   );
 };
 

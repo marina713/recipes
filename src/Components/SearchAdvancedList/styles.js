@@ -35,3 +35,10 @@ export const ShowMoreButton = styled.button`
     width: 120px;
   }
 `;
+
+export const UList = styled.ul`
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 5px;
+`;

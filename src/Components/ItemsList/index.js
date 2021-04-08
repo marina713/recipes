@@ -1,6 +1,6 @@
 import React from "react";
 import Item from "../Item";
-import "./styles.css";
+import { Container } from "./styles";
 import NoItems from "../NoItems";
 
 const ItemsList = (props) => {
@@ -23,7 +23,7 @@ const ItemsList = (props) => {
       <NoItems />
     );
 
-  return <ul className="items-container"> {items} </ul>;
+  return <Container>{items}</Container>;
 };
 
 export default ItemsList;
