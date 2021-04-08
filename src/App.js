@@ -5,6 +5,7 @@ import Header from "./Components/Header/";
 import RecipesList from "./Components/ItemsList";
 import SearchBar from "./Components/SearchBar";
 import MoreSearches from "./Components/MoreSearches/";
+import Footer from "./Components/Footer/";
 import { initialiseTranslation } from "./translation/";
 import { Container } from "./styles";
 
@@ -58,6 +59,7 @@ function App() {
       <SearchBar />
       <div> {loading ? <p>Loading...</p> : <RecipesList data={data} />} </div>
       <MoreSearches />
+      <Footer />
     </Container>
   );
 }

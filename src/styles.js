@@ -5,5 +5,4 @@ export const Container = styled.div`
   text-align: center;
   background-color: ${colors.yellow};
   font-family: "Lexend", sans-serif;
-  padding-bottom: 20px;
 `;

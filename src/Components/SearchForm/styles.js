@@ -50,12 +50,18 @@ export const Input = styled.input`
   }
 
   &:not(:placeholder-shown) {
-    width: 225px;
+    width: 235px;
   }
 
   &:focus {
-    width: 235px;
+    width: 200px;
     border-color: inherit;
+  }
+
+  @media only screen and (min-width: 730px) {
+    &:focus {
+      width: 250px;
+    }
   }
 `;
 
@@ -63,6 +69,7 @@ export const SearchContainer = styled.div`
   display: inline-block;
   position: relative;
   filter: drop-shadow(0 1px ${colors.lightPink});
+  margin-left: 10px;
 
   &:after {
     content: "";
@@ -76,5 +83,8 @@ export const SearchContainer = styled.div`
 
   &:hover {
     ${onHoverHighlight}
+  }
+  @media only screen and (min-width: 730px) {
+    margin-left: 20px;
   }
 `;
