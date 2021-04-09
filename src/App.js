@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import axios from "axios";
+import { updateLatestSearches } from "./state/search/actions";
 import Header from "./Components/Header/";
 import RecipesList from "./Components/ItemsList";
 import SearchBar from "./Components/SearchBar";
@@ -23,16 +24,17 @@ function App() {
   const showMoreSearchesClickCounter = useSelector(
     (state) => state.search.showMoreSearchesClickCounter
   );
+  const dispatch = useDispatch();
 
   useEffect(() => {
     const app_key = "a3a8ac2f511a16ace35fd717243e04c1";
     const app_id = "ccddccff";
-    const num_recipes = 12;
+    const num_recipes = language === "en" ? 12 : 6;
     const url_prefix = language === "en" ? "api" : "test-es";
     let from = num_recipes * showMoreSearchesClickCounter;
     let to = num_recipes * (showMoreSearchesClickCounter + 1);
     const CORSByPass =
-      language === "es" ? "https://cors-anywhere.herokuapp.com/" : "";
+      language === "es" ? "https://thingproxy.freeboard.io/fetch/" : "";
     let url = `${CORSByPass}https://${url_prefix}.edamam.com/search?q=${query}&app_id=${app_id}&app_key=${app_key}&from=${from}&to=${to}${advancedSearchQuery}`;
 
     console.log(url);
@@ -41,6 +43,9 @@ function App() {
       if (showMoreSearchesClickCounter === 0) setData(resultData);
       else if (showMoreSearchesClickCounter > 0) {
         setData([...data, ...resultData]);
+      }
+      if (resultData.length !== 0) {
+        dispatch(updateLatestSearches());
       }
     };
 

@@ -31,3 +31,9 @@ export const changeLanguage = (value) => {
     payload: { value },
   };
 };
+
+export const updateLatestSearches = () => {
+  return {
+    type: "UPDATE_LATEST_SEARCHES",
+  };
+};
