@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
+import { HashRouter, Redirect, Route, Switch } from "react-router-dom";
 import Home from "./screens/Home";
 import { initialiseTranslation } from "./translation/";
 import { Container } from "./styles";
@@ -11,7 +11,9 @@ function App() {
   const { t } = useTranslation();
 
   const initialPath = () => {
-    const urlParams = window.location.pathname
+    // const urlParams = window.location.pathname
+    const urlParams = window.location.hash
+      .replace("#", "")
       .split("/")
       .filter((item) => item !== "");
     const urlLang = urlParams[1] || "en";
@@ -21,7 +23,7 @@ function App() {
   };
 
   return (
-    <BrowserRouter basename={"recipes"}>
+    <HashRouter basename={"recipes"}>
       <Container>
         <Switch>
           <Route path="/:lang/:search" render={() => <Home />} />
@@ -30,7 +32,7 @@ function App() {
           </Route>
         </Switch>
       </Container>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

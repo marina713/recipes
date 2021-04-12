@@ -1,4 +1,6 @@
-const urlParams = window.location.pathname
+// const urlParams = window.location.pathname
+const urlParams = window.location.hash
+  .replace("#", "")
   .split("/")
   .filter((item) => item !== "");
 const urlLang = urlParams[1] || "en";
