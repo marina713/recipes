@@ -23,7 +23,7 @@ function App() {
   };
 
   return (
-    <HashRouter basename={"recipes"}>
+    <HashRouter>
       <Container>
         <Switch>
           <Route path="/:lang/:search" render={() => <Home />} />
