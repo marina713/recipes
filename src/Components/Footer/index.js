@@ -10,7 +10,7 @@ const Footer = () => {
 
   return (
     <Container>
-      <Content>Copyright © Yummiest Recipes 2021</Content>
+      <Content>{t("Footer")}</Content>
       <ContainerImg>
         <Link href="mailto: marinamasp@gmail.com" target="_blank">
           <Icon src={email} alt="email" />{" "}

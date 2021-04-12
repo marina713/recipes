@@ -16,11 +16,6 @@ const searchReducer = (state = initialState, action) => {
       return {
         ...state,
         query: action.payload.value,
-        // searchText: "",
-        // latestSearches:
-        //   state.searchText.length > 0
-        //     ? [state.searchText].concat(state.latestSearches)
-        //     : state.latestSearches,
         showMoreSearchesClickCounter: 0,
       };
     }
