@@ -1,10 +1,17 @@
+const urlParams = window.location.pathname
+  .split("/")
+  .filter((item) => item !== "");
+const urlLang = urlParams[1] || "en";
+const urlSearch =
+  urlParams[2] || (urlLang === "en" ? "artichoke" : "alcachofa");
+
 const initialState = {
   searchText: "",
-  query: "artichoke",
+  query: urlSearch,
   advancedSearchQuery: "",
   latestSearches: [],
   showMoreSearchesClickCounter: 0,
-  language: "en",
+  language: urlLang,
 };
 
 const searchReducer = (state = initialState, action) => {

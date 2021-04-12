@@ -1,4 +1,5 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import {
   Form,
   Container,
@@ -15,11 +16,13 @@ function SearchForm() {
   const { t } = useTranslation();
   const dispatch = useDispatch();
   const searchText = useSelector((state) => state.search.searchText);
+  const history = useHistory();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(submitSearch(searchText));
     console.log(e);
+    history.push(`${searchText}`);
     e.target.reset();
   };
 

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { spin, blacked } from "../Utils/animations";
 import { colors } from "../Utils/colors";
 
@@ -18,6 +18,14 @@ export const Content = styled.div`
   padding: 10px 30px;
 `;
 
+const small = css`
+  width: 20%;
+`;
+
+const fast = css`
+  animation-duration: 1s;
+`;
+
 export const AppLogo = styled.img`
   max-width: 25%;
   animation: ${(props) =>
@@ -25,6 +33,8 @@ export const AppLogo = styled.img`
     infinite 5000ms linear;
 
   ${(props) => (props.isBlacked ? blacked : null)}
+  ${(props) => (props.small ? small : null)}
+  ${(props) => (props.fast ? fast : null)}
 
   &:hover {
     animation: none;
