@@ -4,27 +4,18 @@ import { HashRouter, Redirect, Route, Switch } from "react-router-dom";
 import Home from "./screens/Home";
 import { initialiseTranslation } from "./translation/";
 import { Container } from "./styles";
+import { getInitialURLParams } from "./Components/Utils/variables";
 
 initialiseTranslation();
 
 function App() {
   const { t } = useTranslation();
 
-  const initialPath = () => {
-    const urlParams = window.location.hash
-      .replace("#", "")
-      .split("/")
-      .filter((item) => item !== "");
-    const urlLang = urlParams[0] || "en";
-
-    const splitUrlSearch = [
-      urlParams[1] ? urlParams[1].split("?") : t("InitialSearch"),
-    ];
-    const urlSearch = splitUrlSearch[0];
-    const urlAdvancedSearch = `?${splitUrlSearch[1] || ""}`;
-
-    return `/${urlLang}/${urlSearch}${urlAdvancedSearch}`;
-  };
+  const initialURL = getInitialURLParams(t("InitialSearch"));
+  const advancedSearch = initialURL.advancedSearch
+    ? `?${initialURL.advancedSearch}`
+    : "";
+  const initialPath = `/${initialURL.lang}/${initialURL.search}${advancedSearch}`;
 
   return (
     <HashRouter>
@@ -32,7 +23,7 @@ function App() {
         <Switch>
           <Route exact path="/:lang/:search" render={() => <Home />} />
           <Route path="/">
-            <Redirect to={initialPath()} />
+            <Redirect to={initialPath} />
           </Route>
         </Switch>
       </Container>

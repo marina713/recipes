@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Container, Title, List, Item } from "./styles";
+import { Container, Title, List, Item, Arrow } from "./styles";
+import up from "./up.svg";
+import down from "./down.svg";
 
 const SearchAdvancedItem = ({
   title,
@@ -18,7 +20,7 @@ const SearchAdvancedItem = ({
     <Container>
       <Title onClick={openDropdown}>
         <span>{headerTitle}</span>
-        <span>{isListOpen ? "/\\" : "\\/"}</span>
+        <Arrow src={isListOpen ? up : down} alt="arrow" />
       </Title>
       <List>
         {isListOpen

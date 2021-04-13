@@ -60,3 +60,9 @@ export const Item = styled.button`
   }
   ${(props) => (props.isSelected ? selectedItem : null)}
 `;
+
+export const Arrow = styled.img`
+  filter: invert(34%) sepia(55%) saturate(1524%) hue-rotate(162deg)
+    brightness(96%) contrast(102%);
+  width: 20px;
+`;

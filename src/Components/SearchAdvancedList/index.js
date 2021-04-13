@@ -81,8 +81,14 @@ const SearchAdvancedList = () => {
     ));
   }
 
+  const handleClickDiv = (e) => {
+    if (e.target.localName === "div") {
+      setKeyDd(keyDd + 1);
+    }
+  };
+
   return (
-    <MoreFiltersDivCol>
+    <MoreFiltersDivCol onClick={showMoreFilters ? handleClickDiv : null}>
       <ShowMoreButton
         className={showMoreFilters ? null : "unique-button-search"}
         onClick={toggleShowMoreFilters}
