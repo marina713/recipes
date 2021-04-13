@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/recipes/static/css/main.8413c526.chunk.css",
-    "main.js": "/recipes/static/js/main.d2ecfad9.chunk.js",
-    "main.js.map": "/recipes/static/js/main.d2ecfad9.chunk.js.map",
+    "main.js": "/recipes/static/js/main.bda25b58.chunk.js",
+    "main.js.map": "/recipes/static/js/main.bda25b58.chunk.js.map",
     "runtime-main.js": "/recipes/static/js/runtime-main.3c3ab0a9.js",
     "runtime-main.js.map": "/recipes/static/js/runtime-main.3c3ab0a9.js.map",
     "static/js/2.822d9f73.chunk.js": "/recipes/static/js/2.822d9f73.chunk.js",
@@ -13,6 +13,7 @@
     "static/css/main.8413c526.chunk.css.map": "/recipes/static/css/main.8413c526.chunk.css.map",
     "static/js/2.822d9f73.chunk.js.LICENSE.txt": "/recipes/static/js/2.822d9f73.chunk.js.LICENSE.txt",
     "static/media/dairy-free.c470f358.png": "/recipes/static/media/dairy-free.c470f358.png",
+    "static/media/down.988fa08d.svg": "/recipes/static/media/down.988fa08d.svg",
     "static/media/egg-free.4f824bec.png": "/recipes/static/media/egg-free.4f824bec.png",
     "static/media/email.d5f2e5e0.png": "/recipes/static/media/email.d5f2e5e0.png",
     "static/media/en-lang.7d3f62a1.png": "/recipes/static/media/en-lang.7d3f62a1.png",
@@ -20,12 +21,13 @@
     "static/media/gluten-free.7ea2dccf.png": "/recipes/static/media/gluten-free.7ea2dccf.png",
     "static/media/linkedin.6892b3ae.png": "/recipes/static/media/linkedin.6892b3ae.png",
     "static/media/taco.2d526556.svg": "/recipes/static/media/taco.2d526556.svg",
+    "static/media/up.52878c09.svg": "/recipes/static/media/up.52878c09.svg",
     "static/media/vegetarian.3883f7cc.png": "/recipes/static/media/vegetarian.3883f7cc.png"
   },
   "entrypoints": [
     "static/js/runtime-main.3c3ab0a9.js",
     "static/js/2.822d9f73.chunk.js",
     "static/css/main.8413c526.chunk.css",
-    "static/js/main.d2ecfad9.chunk.js"
+    "static/js/main.bda25b58.chunk.js"
   ]
 }
