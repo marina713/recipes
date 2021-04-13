@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { onHoverHighlight, translate } from "../Utils/animations";
+import { colors } from "../Utils/colors";
 
 export const MoreFiltersDivCol = styled.div`
   justify-content: center;
@@ -17,14 +18,17 @@ export const MoreFiltersDiv = styled.div`
 `;
 
 export const ShowMoreButton = styled.button`
-  color: #e207b9;
-  background-color: #ff63ed;
-  border: 3px solid #e207b9;
+  color: ${colors.darkPink};
+  background-color: ${colors.lightPink};
+  border: 3px solid ${colors.darkPink};
   border-radius: 10px;
   min-height: 33px;
   max-width: 300px;
   align-self: center;
   margin: 2px 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &:hover {
     ${onHoverHighlight}
@@ -41,4 +45,11 @@ export const UList = styled.ul`
   justify-content: space-around;
   flex-wrap: wrap;
   margin: 5px;
+`;
+
+export const ShowMoreIcon = styled.img`
+  filter: invert(17%) sepia(91%) saturate(4096%) hue-rotate(300deg)
+    brightness(94%) contrast(109%);
+  width: 17px;
+  margin-right: 7px;
 `;

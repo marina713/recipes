@@ -1,8 +1,9 @@
 import React from "react";
-import { updateShowMoreSearchesCounter } from "../../state/search/actions";
-import { ShowMoreButton } from "../SearchAdvancedList/styles.js";
 import { useDispatch } from "react-redux";
 import { useTranslation } from "react-i18next";
+import { updateShowMoreSearchesCounter } from "../../state/search/actions";
+import { ShowMoreButton } from "../SearchAdvancedList/styles.js";
+import { Container } from "./styles";
 
 const MoreSearches = () => {
   const { t } = useTranslation();
@@ -13,11 +14,11 @@ const MoreSearches = () => {
   };
 
   return (
-    <div className="more-searches-box">
+    <Container>
       <ShowMoreButton onClick={showMoreResults}>
         {t("MoreRecipes")}
       </ShowMoreButton>
-    </div>
+    </Container>
   );
 };
 

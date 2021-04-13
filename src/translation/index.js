@@ -18,7 +18,7 @@ export const initialiseTranslation = () => {
             SearchSubtitle:
               "Click on search icon, then type your favourite ingredients",
             SearchPlaceholder: "Search...",
-            MoreFilters: "+ FILTERS",
+            MoreFilters: "FILTERS",
             ApplyFilters: "Apply Filters",
             ResetFilters: "Reset Filters",
             Ingredients: "Ingredients",
@@ -44,7 +44,7 @@ export const initialiseTranslation = () => {
             SearchSubtitle:
               "Clica en el icono y escribe tus ingredientes favoritos",
             SearchPlaceholder: "Busca...",
-            MoreFilters: "+ FILTROS",
+            MoreFilters: "FILTROS",
             ApplyFilters: "Aplicar Filtros",
             ResetFilters: "Borrar Filtros",
             Ingredients: "Ingredientes",

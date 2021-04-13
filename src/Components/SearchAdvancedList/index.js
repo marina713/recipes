@@ -8,9 +8,12 @@ import {
   ShowMoreButton,
   MoreFiltersDiv,
   UList,
+  ShowMoreIcon,
 } from "./styles";
 import SearchAdvancedItem from "./SearchAdvancedItem";
 import initialValues from "./variables";
+import plus from "./plus.svg";
+import minus from "./minus.svg";
 
 const SearchAdvancedList = () => {
   const { t } = useTranslation();
@@ -93,7 +96,8 @@ const SearchAdvancedList = () => {
         className={showMoreFilters ? null : "unique-button-search"}
         onClick={toggleShowMoreFilters}
       >
-        {t("MoreFilters")}
+        <ShowMoreIcon src={showMoreFilters ? minus : plus} alt="show-more" />
+        <span>{t("MoreFilters")}</span>
       </ShowMoreButton>
       {showMoreFilters ? (
         <MoreFiltersDivCol className="translate">
