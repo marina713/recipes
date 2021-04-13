@@ -60,10 +60,10 @@ const SearchAdvancedList = () => {
   };
 
   const resetFilters = () => {
+    history.push(searchText);
     dispatch(updateAdvancedSearch(""));
     setDropdownList(initialValues);
     setKeyDd(keyDd + 1);
-    history.push(`${searchText}`);
   };
 
   if (showMoreFilters) {

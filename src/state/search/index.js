@@ -15,9 +15,9 @@ const searchReducer = (state = initialState, action) => {
     case "UPDATE_LATEST_SEARCHES": {
       return {
         ...state,
-        searchText: "",
         latestSearches:
-          state.searchText.length > 0
+          state.searchText.length > 0 &&
+          state.latestSearches[0] !== state.searchText
             ? [state.searchText].concat(state.latestSearches)
             : state.latestSearches,
       };
