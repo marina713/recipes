@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/recipes/static/css/main.8413c526.chunk.css",
-    "main.js": "/recipes/static/js/main.e02cc064.chunk.js",
-    "main.js.map": "/recipes/static/js/main.e02cc064.chunk.js.map",
+    "main.js": "/recipes/static/js/main.f4309985.chunk.js",
+    "main.js.map": "/recipes/static/js/main.f4309985.chunk.js.map",
     "runtime-main.js": "/recipes/static/js/runtime-main.3c3ab0a9.js",
     "runtime-main.js.map": "/recipes/static/js/runtime-main.3c3ab0a9.js.map",
     "static/js/2.822d9f73.chunk.js": "/recipes/static/js/2.822d9f73.chunk.js",
@@ -20,6 +20,8 @@
     "static/media/github.a855c397.png": "/recipes/static/media/github.a855c397.png",
     "static/media/gluten-free.7ea2dccf.png": "/recipes/static/media/gluten-free.7ea2dccf.png",
     "static/media/linkedin.6892b3ae.png": "/recipes/static/media/linkedin.6892b3ae.png",
+    "static/media/minus.966cfb01.svg": "/recipes/static/media/minus.966cfb01.svg",
+    "static/media/plus.f0ff8f92.svg": "/recipes/static/media/plus.f0ff8f92.svg",
     "static/media/taco.2d526556.svg": "/recipes/static/media/taco.2d526556.svg",
     "static/media/up.52878c09.svg": "/recipes/static/media/up.52878c09.svg",
     "static/media/vegetarian.3883f7cc.png": "/recipes/static/media/vegetarian.3883f7cc.png"
@@ -28,6 +30,6 @@
     "static/js/runtime-main.3c3ab0a9.js",
     "static/js/2.822d9f73.chunk.js",
     "static/css/main.8413c526.chunk.css",
-    "static/js/main.e02cc064.chunk.js"
+    "static/js/main.f4309985.chunk.js"
   ]
 }
