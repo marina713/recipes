@@ -1,3 +1,6 @@
+export const getInitialSearchByLang = (lang) =>
+  lang === "en" ? "artichoke" : "alcachofa";
+
 export const getInitialURLParams = (initialSearch = null) => {
   const params = window.location.hash
     .replace("#", "")
@@ -9,7 +12,7 @@ export const getInitialURLParams = (initialSearch = null) => {
   const splitUrlSearch = [
     URLsearch
       ? URLsearch.split("?")
-      : initialSearch || (lang === "en" ? "artichoke" : "alcachofa"),
+      : initialSearch || getInitialSearchByLang(lang),
   ];
 
   const search = splitUrlSearch[0];

@@ -1,3 +1,5 @@
+import { getInitialSearchByLang } from "../../Components/Utils/variables";
+
 import { initialState } from "./variables";
 
 const searchReducer = (state = initialState, action) => {
@@ -40,7 +42,7 @@ const searchReducer = (state = initialState, action) => {
       return {
         ...state,
         searchText: "",
-        query: action.payload.value === "en" ? "artichoke" : "alcachofa",
+        query: getInitialSearchByLang(action.payload.value),
         advancedSearchQuery: "",
         showMoreSearchesClickCounter: 0,
         language: action.payload.value,
