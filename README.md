@@ -1,3 +1,7 @@
+# Check out the Recipes searcher!
+
+Access the App following the link: [Yummiest Recipes!](https://marina713.github.io/recipes).
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
