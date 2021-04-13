@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Container, Title, List, Item } from "./styles";
 
 const SearchAdvancedItem = ({
@@ -7,6 +8,7 @@ const SearchAdvancedItem = ({
   handleSelectItem,
   listInitialState,
 }) => {
+  const { t } = useTranslation();
   const [isListOpen, setListOpen] = useState(listInitialState);
   const headerTitle = title;
 
@@ -29,7 +31,7 @@ const SearchAdvancedItem = ({
                   key={item.id}
                   onClick={() => handleSelectItem(item)}
                 >
-                  {item.ddElement}
+                  {t(item.ddElement)}
                 </Item>
               ))
           : null}

@@ -3,15 +3,20 @@ const urlParams = window.location.hash
   .replace("#", "")
   .split("/")
   .filter((item) => item !== "");
-const urlLang = urlParams[1] || "en";
-const urlSearch =
-  urlParams[2] || (urlLang === "en" ? "artichoke" : "alcachofa");
+const urlLang = urlParams[0] || "en";
+const splitUrlSearch = urlParams[1]
+  ? urlParams[1].split("?")
+  : urlLang === "en"
+  ? "artichoke"
+  : "alcachofa";
+const urlSearch = splitUrlSearch[0];
+const urlAdvancedSearch = `${splitUrlSearch[1] || ""}`;
 
 const initialState = {
   searchText: "",
   query: urlSearch,
-  advancedSearchQuery: "",
-  latestSearches: [],
+  advancedSearchQuery: urlAdvancedSearch,
+  latestSearches: [urlSearch],
   showMoreSearchesClickCounter: 0,
   language: urlLang,
 };

@@ -16,13 +16,15 @@ function SearchForm() {
   const { t } = useTranslation();
   const dispatch = useDispatch();
   const searchText = useSelector((state) => state.search.searchText);
+  const advancedSearchQuery = useSelector(
+    (state) => state.search.advancedSearchQuery
+  );
   const history = useHistory();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(submitSearch(searchText));
-    console.log(e);
-    history.push(`${searchText}`);
+    history.push(`${searchText}?${advancedSearchQuery}`);
     e.target.reset();
   };
 

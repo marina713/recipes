@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { useHistory } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { updateAdvancedSearch } from "../../state/search/actions";
 import {
@@ -13,7 +14,9 @@ import initialValues from "./variables";
 
 const SearchAdvancedList = () => {
   const { t } = useTranslation();
+  const history = useHistory();
   const dispatch = useDispatch();
+  const searchText = useSelector((state) => state.search.searchText);
   const [showMoreFilters, setShowMoreFilters] = useState(false);
   const [keyDd, setKeyDd] = useState(0);
 
@@ -27,10 +30,10 @@ const SearchAdvancedList = () => {
   ];
 
   const labelMap = new Map([
-    ["cuisineType", "Cuisine"],
-    ["health", "Health"],
-    ["mealType", "Meal"],
-    ["dishType", "Dish"],
+    ["cuisineType", t("Cuisine")],
+    ["health", t("Health")],
+    ["mealType", t("Meal")],
+    ["dishType", t("Dish")],
   ]);
 
   let items;
@@ -53,12 +56,14 @@ const SearchAdvancedList = () => {
       .join("");
     dispatch(updateAdvancedSearch(advancedSearchQuery));
     setKeyDd(keyDd + 1);
+    history.push(`${searchText}?${advancedSearchQuery}`);
   };
 
   const resetFilters = () => {
     dispatch(updateAdvancedSearch(""));
     setDropdownList(initialValues);
     setKeyDd(keyDd + 1);
+    history.push(`${searchText}`);
   };
 
   if (showMoreFilters) {

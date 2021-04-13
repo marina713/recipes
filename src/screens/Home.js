@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import axios from "axios";
 import { useTranslation } from "react-i18next";
-import { useParams } from "react-router";
 
 // App components
 import { updateLatestSearches } from "../state/search/actions";
@@ -18,7 +17,6 @@ import { AppLogo } from "../Components/Header/styles";
 import { Container, FlexContainer } from "../styles";
 
 function Home() {
-  console.log(useParams());
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
 

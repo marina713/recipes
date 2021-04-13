@@ -1,6 +1,8 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
+import { advanceFiltersTranslation } from "./variables";
+
 export const initialiseTranslation = () => {
   const initialLang = window.location.pathname.split("/")[2];
 
@@ -27,6 +29,11 @@ export const initialiseTranslation = () => {
             NoRecipesSubtitle: "Try another search!",
             Footer: "Copyright © Yummiest Recipes 2021",
             Loading: "Loading...",
+            Cuisine: "Cuisine",
+            Health: "Health",
+            Meal: "Meal",
+            Dish: "Dish",
+            ...advanceFiltersTranslation.en,
           },
         },
         es: {
@@ -48,6 +55,11 @@ export const initialiseTranslation = () => {
             NoRecipesSubtitle: "Intenta otra busqueda!",
             Footer: "Copyright © Las Recetas mas Deliciosas 2021",
             Loading: "Cargando...",
+            Cuisine: "Cocina",
+            Health: "Salud",
+            Meal: "Comida",
+            Dish: "Plato",
+            ...advanceFiltersTranslation.es,
           },
         },
       },

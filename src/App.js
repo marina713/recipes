@@ -11,22 +11,26 @@ function App() {
   const { t } = useTranslation();
 
   const initialPath = () => {
-    // const urlParams = window.location.pathname
     const urlParams = window.location.hash
       .replace("#", "")
       .split("/")
       .filter((item) => item !== "");
-    const urlLang = urlParams[1] || "en";
-    const urlSearch = urlParams[2] || t("InitialSearch");
+    const urlLang = urlParams[0] || "en";
 
-    return `/${urlLang}/${urlSearch}`;
+    const splitUrlSearch = [
+      urlParams[1] ? urlParams[1].split("?") : t("InitialSearch"),
+    ];
+    const urlSearch = splitUrlSearch[0];
+    const urlAdvancedSearch = `?${splitUrlSearch[1] || ""}`;
+
+    return `/${urlLang}/${urlSearch}${urlAdvancedSearch}`;
   };
 
   return (
     <HashRouter>
       <Container>
         <Switch>
-          <Route path="/:lang/:search" render={() => <Home />} />
+          <Route exact path="/:lang/:search" render={() => <Home />} />
           <Route path="/">
             <Redirect to={initialPath()} />
           </Route>
