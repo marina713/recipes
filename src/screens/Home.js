@@ -81,7 +81,7 @@ function Home() {
           <RecipesList data={data} />
         )}
       </FlexContainer>
-      <MoreSearches />
+      {data.length > 0 ? <MoreSearches /> : null}
       <Footer />
     </Container>
   );
